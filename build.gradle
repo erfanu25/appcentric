@@ -28,11 +28,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.session:spring-session-core'
 	compileOnly 'org.projectlombok:lombok'
-	compile(
-			"io.springfox:springfox-swagger2",
-			"io.springfox:springfox-swagger-ui",
-			"io.springfox:springfox-data-rest",
-	)
+//	compile('io.springfox:springfox-swagger2:2.9.2')
+//	compile('io.springfox:springfox-data-rest:2.9.2')
+//	compile('io.springfox:springfox-swagger-ui:2.9.2')
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
