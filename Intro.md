@@ -24,3 +24,18 @@ https://www.javaguides.net/2018/11/spring-data-jpa-tutorial-getting-started.html
 _**Java**_
 https://www.javaworld.com/article/3379043/what-is-jpa-introduction-to-the-java-persistence-api.html
 *** XML vs. annotation-based configuration
+
+`7.` Response entity 
+https://www.baeldung.com/spring-response-entity
+
+`8.` Swagger API
+https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
+`9.` Request Mapping
+https://springframework.guru/spring-requestmapping-annotation/
+
+**autowire
+
+`10.` Difference between @autowired and @Resource
+https://javabeat.net/difference-resource-autowired-inject-spring-injection/
+https://www.tutorialspoint.com/spring/spring_autowired_annotation.htm

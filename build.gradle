@@ -20,16 +20,13 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
 }
 
 dependencies {
 	
 	//for rest api
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
-	
-//	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-//	implementation 'org.springframework.boot:spring-boot-starter-security'
-//	implementation 'org.springframework.session:spring-session-core'
 	
 	//for getter setter
 	compileOnly 'org.projectlombok:lombok'
@@ -41,9 +38,9 @@ dependencies {
 	compile group: 'com.h2database', name: 'h2', version: '1.4.199'
 	
 	//for swagger
-//	compile('io.springfox:springfox-swagger2:2.9.2')
-//	compile('io.springfox:springfox-data-rest:2.9.2')
-//	compile('io.springfox:springfox-swagger-ui:2.9.2')
+	compile('io.springfox:springfox-swagger2:3.0.0-SNAPSHOT')
+	compile('io.springfox:springfox-data-rest:3.0.0-SNAPSHOT')
+	compile('io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT')
 	
 	// for template  engine
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
@@ -51,12 +48,7 @@ dependencies {
 	//oracle database
 	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
 	
-//	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
-//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-//		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-//	}
-//	testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {
