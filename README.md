@@ -43,3 +43,7 @@ https://springframework.guru/spring-requestmapping-annotation/
 `10.` Difference between @autowired and @Resource
 https://javabeat.net/difference-resource-autowired-inject-spring-injection/
 https://www.tutorialspoint.com/spring/spring_autowired_annotation.htm
+
+`11.` Database Connection
+https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/
+https://mkyong.com/spring-boot/spring-boot-spring-data-jpa-oracle-example/
