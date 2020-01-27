@@ -47,3 +47,15 @@ https://www.tutorialspoint.com/spring/spring_autowired_annotation.htm
 `11.` Database Connection
 https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/
 https://mkyong.com/spring-boot/spring-boot-spring-data-jpa-oracle-example/
+
+`12.` Hikaricp - DB Connection pools
+https://www.baeldung.com/hikaricp
+https://dzone.com/articles/database-connection-pooling-in-java-with-hikaricp
+
+`13.` Spring handler Mapping  / modelmapper
+http://www.appsdeveloperblog.com/java-objects-mapping-with-modelmapper/ -best  one  
+advantages  -  https://auth0.com/blog/automatically-mapping-dto-to-entity-on-spring-boot-apis/
+https://www.baeldung.com/spring-handler-mappings
+https://www.baeldung.com/mapstruct
+https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application
+

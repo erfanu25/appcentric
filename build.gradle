@@ -34,8 +34,11 @@ dependencies {
 	//for JPA 
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.0.RELEASE'
 	
-	//for h2 database 
-	compile group: 'com.h2database', name: 'h2', version: '1.4.199'
+	//for mysql database
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+	
+//	//for h2 database 
+//	compile group: 'com.h2database', name: 'h2', version: '1.4.199'
 	
 	//for swagger
 	compile('io.springfox:springfox-swagger2:3.0.0-SNAPSHOT')
@@ -45,8 +48,8 @@ dependencies {
 	// for template  engine
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	
-	//oracle database
-	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
+//	//oracle database
+//	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
 	
 	annotationProcessor 'org.projectlombok:lombok'
 }
