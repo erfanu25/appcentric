@@ -12,7 +12,8 @@ https://www.baeldung.com/spring-template-engines
 https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.2.0.RELEASE
 
 `3. Use lombok for getter setter / Constructors of entity `
-https://www.baeldung.com/intro-to-project-lombok
+https://www.baeldung.com/intro-to-project-lombok  
+important use of getter setter- https://www.codejava.net/coding/java-getter-and-setter-tutorial-from-basics-to-best-practices
 
 `4. for rest call implementation `**
 'org.springframework.boot:spring-boot-starter-data-rest'
@@ -53,7 +54,7 @@ https://www.baeldung.com/hikaricp
 https://dzone.com/articles/database-connection-pooling-in-java-with-hikaricp
 
 `13.` Spring handler Mapping  / modelmapper
-http://www.appsdeveloperblog.com/java-objects-mapping-with-modelmapper/ -best  one  
+http://www.appsdeveloperblog.com/java-objects-mapping-with-modelmapper/ -bestone 
 advantages  -  https://auth0.com/blog/automatically-mapping-dto-to-entity-on-spring-boot-apis/
 https://www.baeldung.com/spring-handler-mappings
 https://www.baeldung.com/mapstruct

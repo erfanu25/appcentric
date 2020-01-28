@@ -1,8 +1,7 @@
 package org.erfan.erfanu25.services;
 
-import org.erfan.erfanu25.model.Customer;
+import org.erfan.erfanu25.entity.CustomerEntity;
 import org.erfan.erfanu25.repository.CustomerRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,11 +16,11 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    public List<Customer> getCustomer() {
+    public List<CustomerEntity> getCustomer() {
         return customerRepository.findAll();
     }
 
-    public Optional<Customer> getCustomerById(long id)  {
+    public Optional<CustomerEntity> getCustomerById(long id)  {
         return customerRepository.findById(id);
     }
 
@@ -29,17 +28,17 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public Customer saveCustomer(Customer customer) {
-        return customerRepository.save(customer);
+    public CustomerEntity saveCustomer(CustomerEntity customerEntity) {
+        return customerRepository.save(customerEntity);
     }
 
-    public Customer updateCustomer(Customer customer, long id) {
-        Optional<Customer> customerOptional =  customerRepository.findById(id);
+    public CustomerEntity updateCustomer(CustomerEntity customerEntity, long id) {
+        Optional<CustomerEntity> customerOptional =  customerRepository.findById(id);
         if (!customerOptional.isPresent()) {
             return null;
         }
-        customer.setId(id);
-        customerRepository.save(customer);
-        return customer;
+        customerEntity.setId(id);
+        customerRepository.save(customerEntity);
+        return customerEntity;
     }
 }

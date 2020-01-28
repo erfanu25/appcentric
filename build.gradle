@@ -37,6 +37,9 @@ dependencies {
 	//for mysql database
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
 	
+	//for entity mapper
+	compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.6'
+	
 //	//for h2 database 
 //	compile group: 'com.h2database', name: 'h2', version: '1.4.199'
 	

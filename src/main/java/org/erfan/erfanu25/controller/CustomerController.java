@@ -1,6 +1,6 @@
 package org.erfan.erfanu25.controller;
 
-import org.erfan.erfanu25.model.Customer;
+import org.erfan.erfanu25.entity.CustomerEntity;
 import org.erfan.erfanu25.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,14 +23,14 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping(value = "/customer")
-    public List<Customer> customer() {
+    public List<CustomerEntity> customer() {
 
         return customerService.getCustomer();
     }
 
     @GetMapping("/customr/{id}")
-    public Customer getCustomerById(@PathVariable long id) {
-        Optional<Customer> customer = customerService.getCustomerById(id);
+    public CustomerEntity getCustomerById(@PathVariable long id) {
+        Optional<CustomerEntity> customer = customerService.getCustomerById(id);
         if(!customer.isPresent()) {
             throw new ArithmeticException("Not Found");
         }
@@ -43,13 +43,13 @@ public class CustomerController {
     }
 
     @PostMapping("/customer")
-    public ResponseEntity<Object> createCustomer(@RequestBody  Customer customer) {
-        return ResponseEntity.ok(customerService.saveCustomer(customer));
+    public ResponseEntity<Object> createCustomer(@RequestBody CustomerEntity customerEntity) {
+        return ResponseEntity.ok(customerService.saveCustomer(customerEntity));
     }
 
     @PutMapping("/customer/{id}")
-    public ResponseEntity<Object> updateCustomer(@RequestBody Customer customer, @PathVariable long id) {
-        customerService.updateCustomer(customer,id);
+    public ResponseEntity<Object> updateCustomer(@RequestBody CustomerEntity customerEntity, @PathVariable long id) {
+        customerService.updateCustomer(customerEntity,id);
         return ResponseEntity.noContent().build();
     }
 

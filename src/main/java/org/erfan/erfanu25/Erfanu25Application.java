@@ -1,6 +1,6 @@
 package org.erfan.erfanu25;
 
-import org.erfan.erfanu25.model.Customer;
+import org.erfan.erfanu25.entity.CustomerEntity;
 import org.erfan.erfanu25.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,11 +19,11 @@ public class Erfanu25Application {
 	@Bean
 	public CommandLineRunner demoData(CustomerRepository customerRepository) {
 		return args -> {
-			Customer customer = new Customer();
-			customer.setName("Erfan");
-			customer.setDate(new Date());
-			customer.setEmail("mderfan2@gmail.com");
-			customerRepository.save(customer);
+			CustomerEntity customerEntity = new CustomerEntity();
+			customerEntity.setName("Erfan");
+			customerEntity.setDate(new Date());
+			customerEntity.setEmail("mderfan2@gmail.com");
+			customerRepository.save(customerEntity);
 		};
 	}
 
