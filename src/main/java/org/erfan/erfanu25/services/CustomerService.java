@@ -1,9 +1,10 @@
 package org.erfan.erfanu25.services;
 
+import org.erfan.erfanu25.domain.Customer;
 import org.erfan.erfanu25.entity.CustomerEntity;
+import org.erfan.erfanu25.mapper.CustomerMapper;
 import org.erfan.erfanu25.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -11,17 +12,20 @@ import java.util.Optional;
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
+    private final CustomerMapper customerMapper;
 
-    public CustomerService(CustomerRepository customerRepository){
+    public CustomerService(CustomerRepository customerRepository,
+                           CustomerMapper customerMapper){
         this.customerRepository = customerRepository;
+        this.customerMapper =  customerMapper;
     }
 
     public List<CustomerEntity> getCustomer() {
         return customerRepository.findAll();
     }
 
-    public Optional<CustomerEntity> getCustomerById(long id)  {
-        return customerRepository.findById(id);
+    public Customer getCustomerById(long id)  {
+        return customerMapper.entityToDomain(customerRepository.findById(id).get());
     }
 
     public void delete(long id) {

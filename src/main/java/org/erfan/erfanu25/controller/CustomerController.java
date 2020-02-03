@@ -1,5 +1,6 @@
 package org.erfan.erfanu25.controller;
 
+import org.erfan.erfanu25.domain.Customer;
 import org.erfan.erfanu25.entity.CustomerEntity;
 import org.erfan.erfanu25.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +30,8 @@ public class CustomerController {
     }
 
     @GetMapping("/customr/{id}")
-    public CustomerEntity getCustomerById(@PathVariable long id) {
-        Optional<CustomerEntity> customer = customerService.getCustomerById(id);
-        if(!customer.isPresent()) {
-            throw new ArithmeticException("Not Found");
-        }
-        return customer.get();
+    public Customer getCustomerById(@PathVariable long id) {
+        return customerService.getCustomerById(id);
     }
 
     @DeleteMapping("/customer/{id}")

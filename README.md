@@ -60,3 +60,6 @@ https://www.baeldung.com/spring-handler-mappings
 https://www.baeldung.com/mapstruct
 https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application
 
+`14.` About auto wiring
+https://technology.amis.nl/2018/02/22/java-how-to-fix-spring-autowired-annotation-not-working-issues/
+
