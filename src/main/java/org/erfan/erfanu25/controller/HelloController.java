@@ -9,9 +9,9 @@ import springfox.documentation.annotations.ApiIgnore;
 @ApiIgnore
 public class HelloController {
 
-    @RequestMapping("/")
-    public String printHello(ModelMap model) {
-        model.addAttribute("message", "Hello Spring MVC Framework!");
-        return "hello";
-    }
+//    @RequestMapping("/")
+//    public String printHello(ModelMap model) {
+//        model.addAttribute("message", "Hello Spring MVC Framework!");
+//        return "hello";
+//    }
 }

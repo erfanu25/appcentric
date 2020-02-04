@@ -7,6 +7,7 @@ import org.erfan.erfanu25.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomerService {
@@ -20,8 +21,8 @@ public class CustomerService {
         this.customerMapper =  customerMapper;
     }
 
-    public List<CustomerEntity> getCustomer() {
-        return customerRepository.findAll();
+    public List<Customer> getCustomer() {
+        return customerMapper.entityToDomainList(customerRepository.findAll());
     }
 
     public Customer getCustomerById(long id)  {

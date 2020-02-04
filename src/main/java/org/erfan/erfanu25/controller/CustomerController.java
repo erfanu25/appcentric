@@ -24,8 +24,7 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping(value = "/customer")
-    public List<CustomerEntity> customer() {
-
+    public List<Customer> customer() {
         return customerService.getCustomer();
     }
 
