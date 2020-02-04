@@ -33,8 +33,8 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public CustomerEntity saveCustomer(CustomerEntity customerEntity) {
-        return customerRepository.save(customerEntity);
+    public Customer saveCustomer(Customer customer) {
+        return customerMapper.entityToDomain(customerRepository.save(customerMapper.domainToEntity(customer)));
     }
 
     public CustomerEntity updateCustomer(CustomerEntity customerEntity, long id) {

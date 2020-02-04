@@ -38,8 +38,8 @@ public class CustomerController {
     }
 
     @PostMapping("/customer")
-    public ResponseEntity<Object> createCustomer(@RequestBody CustomerEntity customerEntity) {
-        return ResponseEntity.ok(customerService.saveCustomer(customerEntity));
+    public ResponseEntity<Object> createCustomer(@RequestBody Customer customer) {
+        return ResponseEntity.ok(customerService.saveCustomer(customer));
     }
 
     @PutMapping("/customer/{id}")
