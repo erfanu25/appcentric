@@ -18,10 +18,11 @@ public class Erfanu25Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Erfanu25Application.class, args);
-        browse("http://localhost:8083/swagger-ui.html");
+        browse();
 	}
 
-    public static void browse(String url) {
+    private static void browse() {
+        String url = "http://localhost:8083/swagger-ui.html";
         if(Desktop.isDesktopSupported()){
             Desktop desktop = Desktop.getDesktop();
             try {

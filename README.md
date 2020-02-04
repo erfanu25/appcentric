@@ -2,7 +2,7 @@
 
 This project is using learning and experiment purpose.
 
-See [here](../basic.md) for other java topics...
+See [here](../master/basic.md) for other java topics...
 
 Spring
 ------------
