@@ -37,13 +37,14 @@ public class CustomerService {
         return customerMapper.entityToDomain(customerRepository.save(customerMapper.domainToEntity(customer)));
     }
 
-    public CustomerEntity updateCustomer(CustomerEntity customerEntity, long id) {
+    public Customer updateCustomer(Customer customer, long id) {
         Optional<CustomerEntity> customerOptional =  customerRepository.findById(id);
         if (!customerOptional.isPresent()) {
             return null;
         }
+        CustomerEntity customerEntity = customerMapper.domainToEntity(customer);
         customerEntity.setId(id);
         customerRepository.save(customerEntity);
-        return customerEntity;
+        return customerMapper.entityToDomain(customerEntity);
     }
 }

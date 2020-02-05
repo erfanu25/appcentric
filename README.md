@@ -65,3 +65,6 @@ https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application
 `14.` About auto wiring
 https://technology.amis.nl/2018/02/22/java-how-to-fix-spring-autowired-annotation-not-working-issues/
 
+`15.` Auto update and create date
+https://stackoverflow.com/questions/49954812/how-can-you-make-a-created-at-column-generate-the-creation-date-time-automatical
+

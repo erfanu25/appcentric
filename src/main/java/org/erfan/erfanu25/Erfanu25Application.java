@@ -45,10 +45,11 @@ public class Erfanu25Application {
 	public CommandLineRunner demoData(CustomerRepository customerRepository) {
 		return args -> {
 			CustomerEntity customerEntity = new CustomerEntity();
-			customerEntity.setName("Erfan");
-			customerEntity.setDate(new Date());
-			customerEntity.setEmail("mderfan2@gmail.com");
-			customerRepository.save(customerEntity);
+			if (customerRepository.findByName("Erfan").isEmpty()) {
+                customerEntity.setName("Erfan");
+                customerEntity.setEmail("mderfan2@gmail.com");
+                customerRepository.save(customerEntity);
+            }
 		};
 	}
 
