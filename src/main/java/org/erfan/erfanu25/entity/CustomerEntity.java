@@ -4,16 +4,15 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-public class CustomerEntity implements Serializable {
+@Table(name = "CustomerInfo")
+public class CustomerEntity {
 
     // "customer_seq" is Oracle sequence name.
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
@@ -28,11 +27,11 @@ public class CustomerEntity implements Serializable {
 
     @Column(name = "CREATED_DATE", updatable = false)
     @CreationTimestamp
-    Date date;
+    LocalDateTime date;
 
     @Column(name = "UPDATED_DATE")
     @UpdateTimestamp
-    Date updateDate;
+    LocalDateTime updateDate;
 
     Long balance;
 
