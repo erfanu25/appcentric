@@ -2,18 +2,21 @@ package org.erfan.erfanu25.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
+import org.erfan.erfanu25.domain.Enum.StatusType;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Accessors(chain = true)
 public class Order {
     Long id;
     int quantity;
     String itemName;
-    Customer customer;
+    Long customerId;
     long price;
-    String status;
-    Date order;
+    StatusType status;
+    LocalDateTime date;
 
 }

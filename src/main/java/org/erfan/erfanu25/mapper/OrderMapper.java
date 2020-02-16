@@ -2,30 +2,40 @@ package org.erfan.erfanu25.mapper;
 
 import org.erfan.erfanu25.domain.Order;
 import org.erfan.erfanu25.entity.OrderEntity;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeToken;
+import org.erfan.erfanu25.repository.CustomerRepository;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.Type;
-import java.util.List;
 
 @Component
 public class OrderMapper {
 
-    ModelMapper modelMapper = new ModelMapper();
+    private final CustomerRepository customerRepository;
 
-    public OrderEntity domainToEntity(Order order) {
-        return modelMapper.map(order,OrderEntity.class);
+    public OrderMapper(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
     }
 
-    public Order entityToDomain(OrderEntity orderEntity ) {
-        return modelMapper.map(orderEntity,Order.class);
+    public ResultMapper<OrderEntity, Order> entityToDomainMapping() {
+        return entity ->
+                new Order().setId(entity.getId())
+                        .setQuantity(entity.getQuantity())
+                        .setStatus(entity.getStatus())
+                        .setItemName(entity.getItem())
+                        .setPrice(entity.getPrice())
+                        .setDate(entity.getDate())
+                        .setCustomerId(entity.getCustomerEntity().getId());
     }
 
-    public List<Order> entityToDomainList(List<OrderEntity> customerEntities) {
 
-        Type listType = new TypeToken<List<Order>>(){}.getType();
-        return modelMapper.map(customerEntities,  listType);
-
+    public ResultMapper<Order, OrderEntity> domainToEntityMapping() {
+        return domain ->
+                new OrderEntity()
+                        .setQuantity(domain.getQuantity())
+                        .setStatus(domain.getStatus())
+                        .setItem(domain.getItemName())
+                        .setPrice(domain.getPrice())
+                        .setCustomerEntity(
+                                customerRepository.findById(domain.getCustomerId()).get()
+                        );
     }
+
 }

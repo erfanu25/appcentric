@@ -6,6 +6,7 @@ import org.erfan.erfanu25.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class OrderService {
@@ -19,6 +20,16 @@ public class OrderService {
     }
 
     public List<Order> getOrderList() {
-        return orderMapper.entityToDomainList(orderRepository.findAll());
+        return orderRepository.findAll()
+                .stream()
+                .map(orderEntity -> orderMapper
+                                        .entityToDomainMapping()
+                                        .map(orderEntity))
+                .collect(Collectors.toList());
     }
+
+    public Long saveOrder(Order order) {
+        return orderRepository.save(orderMapper.domainToEntityMapping().map(order)).getId();
+    }
+
 }

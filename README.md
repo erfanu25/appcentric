@@ -68,3 +68,6 @@ https://technology.amis.nl/2018/02/22/java-how-to-fix-spring-autowired-annotatio
 `15.` Auto update and create date
 https://stackoverflow.com/questions/49954812/how-can-you-make-a-created-at-column-generate-the-creation-date-time-automatical
 
+`16.`  How to generate primary keys with JPA and Hibernate   
+https://thoughts-on-java.org/jpa-generate-primary-keys/
+
