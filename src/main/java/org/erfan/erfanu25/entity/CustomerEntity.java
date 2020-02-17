@@ -18,11 +18,14 @@ public class CustomerEntity {
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
 //    @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
+    @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
     Long id;
 
+    @Column(name = "CUSTOMER_NAME")
     String name;
 
+    @Column(name = "EMAIL")
     String email;
 
     @Column(name = "CREATED_DATE", updatable = false)
@@ -32,7 +35,7 @@ public class CustomerEntity {
     @Column(name = "UPDATED_DATE")
     @UpdateTimestamp
     LocalDateTime updateDate;
-
+    @Column(name = "BALANCE")
     Long balance;
 
     //getters and setters, contructors
