@@ -29,4 +29,12 @@ public class CustomerMapper {
         return modelMapper.map(customerEntities,  listType);
 
     }
+
+    public ResultMapper<CustomerEntity, Customer> entityToDomainMapping() {
+        return entity ->
+                new Customer().setId(entity.getId())
+                        .setFirstName(entity.getFirstName())
+                        .setLastName(entity.getLastName())
+                        .setEmail(entity.getEmail());
+    }
 }

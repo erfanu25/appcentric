@@ -22,7 +22,12 @@ public class CustomerService {
     }
 
     public List<Customer> getCustomer() {
-        return customerMapper.entityToDomainList(customerRepository.findAll());
+        return customerRepository.findAll()
+                .stream()
+                .map(customerEntity -> customerMapper
+                        .entityToDomainMapping()
+                        .map(customerEntity))
+                .collect(Collectors.toList());
     }
 
     public Customer getCustomerById(long id)  {
@@ -37,14 +42,14 @@ public class CustomerService {
         return customerMapper.entityToDomain(customerRepository.save(customerMapper.domainToEntity(customer)));
     }
 
-    public Customer updateCustomer(Customer customer, long id) {
+    public String updateCustomer(Customer customer, long id) {
         Optional<CustomerEntity> customerOptional =  customerRepository.findById(id);
         if (!customerOptional.isPresent()) {
-            return null;
+            return "Customer Not Found";
         }
         CustomerEntity customerEntity = customerMapper.domainToEntity(customer);
         customerEntity.setId(id);
         customerRepository.save(customerEntity);
-        return customerMapper.entityToDomain(customerEntity);
+        return "Update Success";
     }
 }

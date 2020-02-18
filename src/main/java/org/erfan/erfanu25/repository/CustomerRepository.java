@@ -9,7 +9,7 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "CustomerEntity", path = "CustomerEntity")
 public interface CustomerRepository extends JpaRepository<CustomerEntity, Long> {
-    List<CustomerEntity>  findByName(@Param("name") String name);
+    List<CustomerEntity>  findByFirstName(@Param("name") String name);
 
     List<CustomerEntity>  findById(@Param("Id") String Id);
 }

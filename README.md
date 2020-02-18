@@ -74,3 +74,6 @@ https://thoughts-on-java.org/jpa-generate-primary-keys/
 `17.` Differences between @RequestParam and @PathVariable annotations 
 https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html
 
+`18.` Spring Security
+https://www.baeldung.com/security-spring
+

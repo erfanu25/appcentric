@@ -6,6 +6,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Getter
@@ -22,8 +24,15 @@ public class CustomerEntity {
     @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
     Long id;
 
-    @Column(name = "CUSTOMER_NAME")
-    String name;
+    @NotNull
+    @NotEmpty
+    @Column(name = "CUSTOMER_FIRST_NAME")
+    String firstName;
+
+    @NotNull
+    @NotEmpty
+    @Column(name = "CUSTOMER_LAST_NAME")
+    String lastName;
 
     @Column(name = "EMAIL")
     String email;
@@ -37,6 +46,9 @@ public class CustomerEntity {
     LocalDateTime updateDate;
     @Column(name = "BALANCE")
     Long balance;
+
+    @Column(name = "PASS")
+    String password;
 
     //getters and setters, contructors
 }

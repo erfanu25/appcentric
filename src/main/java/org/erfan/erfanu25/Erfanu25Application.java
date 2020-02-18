@@ -45,8 +45,9 @@ public class Erfanu25Application {
 	public CommandLineRunner demoData(CustomerRepository customerRepository) {
 		return args -> {
 			CustomerEntity customerEntity = new CustomerEntity();
-			if (customerRepository.findByName("Erfan").isEmpty()) {
-                customerEntity.setName("Erfan");
+			if (customerRepository.findByFirstName("Erfan").isEmpty()) {
+                customerEntity.setFirstName("Erfan");
+                customerEntity.setLastName("Bhuiyan");
                 customerEntity.setEmail("mderfan2@gmail.com");
                 customerRepository.save(customerEntity);
             }
