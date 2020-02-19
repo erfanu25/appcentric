@@ -1,7 +1,7 @@
-package org.erfan.erfanu25;
+package org.erfan.appcentric;
 
-import org.erfan.erfanu25.entity.CustomerEntity;
-import org.erfan.erfanu25.repository.CustomerRepository;
+import org.erfan.appcentric.entity.CustomerEntity;
+import org.erfan.appcentric.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,6 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Date;
 
 @SpringBootApplication
 public class Erfanu25Application {

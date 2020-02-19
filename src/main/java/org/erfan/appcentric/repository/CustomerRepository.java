@@ -1,6 +1,6 @@
-package org.erfan.erfanu25.repository;
+package org.erfan.appcentric.repository;
 
-import org.erfan.erfanu25.entity.CustomerEntity;
+import org.erfan.appcentric.entity.CustomerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;

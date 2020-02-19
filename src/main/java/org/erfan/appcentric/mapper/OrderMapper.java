@@ -1,8 +1,8 @@
-package org.erfan.erfanu25.mapper;
+package org.erfan.appcentric.mapper;
 
-import org.erfan.erfanu25.domain.Order;
-import org.erfan.erfanu25.entity.OrderEntity;
-import org.erfan.erfanu25.repository.CustomerRepository;
+import org.erfan.appcentric.domain.Order;
+import org.erfan.appcentric.entity.OrderEntity;
+import org.erfan.appcentric.repository.CustomerRepository;
 import org.springframework.stereotype.Component;
 
 @Component

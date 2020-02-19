@@ -1,9 +1,9 @@
-package org.erfan.erfanu25.entity;
+package org.erfan.appcentric.entity;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import org.erfan.erfanu25.domain.Enum.StatusType;
+import org.erfan.appcentric.domain.Enum.StatusType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
