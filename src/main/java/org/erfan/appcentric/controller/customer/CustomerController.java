@@ -1,12 +1,12 @@
-package org.erfan.erfanu25.controller;
+package org.erfan.appcentric.controller.customer;
 
-import org.erfan.erfanu25.domain.Customer;
-import org.erfan.erfanu25.entity.CustomerEntity;
-import org.erfan.erfanu25.services.CustomerService;
+import org.erfan.appcentric.domain.Customer;
+import org.erfan.appcentric.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -38,7 +38,7 @@ public class CustomerController {
     }
 
     @PostMapping("/customer")
-    public ResponseEntity<Object> createCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<Object> createCustomer(@Valid @RequestBody Customer customer) {
         return ResponseEntity.ok(customerService.saveCustomer(customer));
     }
 

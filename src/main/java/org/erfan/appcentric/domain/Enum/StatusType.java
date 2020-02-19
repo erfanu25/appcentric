@@ -1,4 +1,4 @@
-package org.erfan.erfanu25.domain.Enum;
+package org.erfan.appcentric.domain.Enum;
 
 public enum StatusType {
     Ordered,

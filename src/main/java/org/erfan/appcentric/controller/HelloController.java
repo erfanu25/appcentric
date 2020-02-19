@@ -1,8 +1,6 @@
-package org.erfan.erfanu25.controller;
+package org.erfan.appcentric.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
 import springfox.documentation.annotations.ApiIgnore;
 
 @Controller

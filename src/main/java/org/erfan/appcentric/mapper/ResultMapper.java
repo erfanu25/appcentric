@@ -1,4 +1,4 @@
-package org.erfan.erfanu25.mapper;
+package org.erfan.appcentric.mapper;
 
 public interface ResultMapper<T,R> {
     R map(T entity);

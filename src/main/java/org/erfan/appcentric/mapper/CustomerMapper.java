@@ -1,7 +1,7 @@
-package org.erfan.erfanu25.mapper;
+package org.erfan.appcentric.mapper;
 
-import org.erfan.erfanu25.domain.Customer;
-import org.erfan.erfanu25.entity.CustomerEntity;
+import org.erfan.appcentric.domain.Customer;
+import org.erfan.appcentric.entity.CustomerEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Component;

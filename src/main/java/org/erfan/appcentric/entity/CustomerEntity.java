@@ -1,4 +1,4 @@
-package org.erfan.erfanu25.entity;
+package org.erfan.appcentric.entity;
 
 import lombok.Getter;
 import lombok.Setter;

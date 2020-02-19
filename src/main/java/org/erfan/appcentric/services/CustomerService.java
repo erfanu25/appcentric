@@ -1,9 +1,9 @@
-package org.erfan.erfanu25.services;
+package org.erfan.appcentric.services;
 
-import org.erfan.erfanu25.domain.Customer;
-import org.erfan.erfanu25.entity.CustomerEntity;
-import org.erfan.erfanu25.mapper.CustomerMapper;
-import org.erfan.erfanu25.repository.CustomerRepository;
+import org.erfan.appcentric.domain.Customer;
+import org.erfan.appcentric.entity.CustomerEntity;
+import org.erfan.appcentric.mapper.CustomerMapper;
+import org.erfan.appcentric.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
