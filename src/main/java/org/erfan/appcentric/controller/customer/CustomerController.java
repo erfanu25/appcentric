@@ -27,7 +27,7 @@ public class CustomerController {
         return customerService.getCustomer();
     }
 
-    @GetMapping("/customr/{id}")
+    @GetMapping("/customer/{id}")
     public Customer getCustomerById(@PathVariable long id) {
         return customerService.getCustomerById(id);
     }
@@ -47,14 +47,4 @@ public class CustomerController {
         return ResponseEntity.ok(customerService.updateCustomer(customer,id));
     }
 
-
-
-//    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-//    public customer() {
-//
-//    }
-
-//    ResponseEntity<String> hello() {
-//        return new ResponseEntity<>("Hello World!", HttpStatus.OK);
-//    }
 }
