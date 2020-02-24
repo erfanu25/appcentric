@@ -42,3 +42,6 @@ By using Lambda--
         return entity ->
             new Order().setQuantity(entity.getQuantity());
     }
+
+_`6.`_ Java Type Cast
+http://www.c4learn.com/java/java-type-casting-inheritance/

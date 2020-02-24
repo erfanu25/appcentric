@@ -39,7 +39,7 @@ public class CustomerService {
     }
 
     public Customer saveCustomer(Customer customer) {
-        return customerMapper.entityToDomain(customerRepository.save(customerMapper.domainToEntity(customer)));
+        return customerMapper.entityToDomainMapping().map(customerRepository.save(customerMapper.domainToEntity(customer)));
     }
 
     public String updateCustomer(Customer customer, long id) {
