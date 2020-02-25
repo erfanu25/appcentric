@@ -1,6 +1,6 @@
-# erfanu25
+# appcentric
 
-This project is using learning and experiment purpose.
+This Spring Boot project is using learning and experiment purpose.
 
 See [here](../master/basic.md) for other java topics...
 
