@@ -7,12 +7,15 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.erfan.appcentric.annotation.PasswordMatches;
 import org.erfan.appcentric.annotation.ValidEmail;
+import org.erfan.appcentric.domain.Enum.UserRole;
 
 @Getter
 @Setter
 @Accessors(chain = true)
 @PasswordMatches
-public class Customer {
+public class User {
+    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     Long id;
     String firstName;
     String lastName;
@@ -24,5 +27,8 @@ public class Customer {
     @JsonIgnore
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     String matchPassword;
+    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    UserRole userType;
 
 }

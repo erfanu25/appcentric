@@ -2,6 +2,8 @@ package org.erfan.appcentric.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
+import org.erfan.appcentric.domain.Enum.UserRole;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -12,16 +14,15 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Accessors(chain = true)
 @Entity
-@Table(name = "CustomerInfo")
-public class CustomerEntity {
+@Table(name = "UserInfo")
+public class UserEntity {
 
-    // "customer_seq" is Oracle sequence name.
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
-//    @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
-    @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
+    @SequenceGenerator(sequenceName = "user_seq", allocationSize = 1, name = "CUST_SEQ")
+    @Column(name = "CUSTOMER_ID", updatable = false, nullable = false)
     Long id;
 
     @NotNull
@@ -34,7 +35,7 @@ public class CustomerEntity {
     @Column(name = "CUSTOMER_LAST_NAME")
     String lastName;
 
-    @Column(name = "EMAIL")
+    @Column(name = "EMAIL", unique = true, updatable = false)
     String email;
 
     @Column(name = "CREATED_DATE", updatable = false)
@@ -50,5 +51,6 @@ public class CustomerEntity {
     @Column(name = "PASS")
     String password;
 
-    //getters and setters, contructors
+    UserRole userType;
+
 }

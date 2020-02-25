@@ -1,7 +1,7 @@
 package org.erfan.appcentric.annotation.impl;
 
 import org.erfan.appcentric.annotation.PasswordMatches;
-import org.erfan.appcentric.domain.Customer;
+import org.erfan.appcentric.domain.User;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -13,7 +13,7 @@ public class PasswordMatchesValidator implements ConstraintValidator<PasswordMat
     }
     @Override
     public boolean isValid(Object obj, ConstraintValidatorContext context){
-         Customer customer = (Customer) obj;
-         return customer.getMatchPassword().equals(customer.getPassword());
+         User user = (User) obj;
+         return user.getMatchPassword().equals(user.getPassword());
     }
 }

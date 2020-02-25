@@ -2,16 +2,16 @@ package org.erfan.appcentric.mapper;
 
 import org.erfan.appcentric.domain.Order;
 import org.erfan.appcentric.entity.OrderEntity;
-import org.erfan.appcentric.repository.CustomerRepository;
+import org.erfan.appcentric.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderMapper {
 
-    private final CustomerRepository customerRepository;
+    private final UserRepository userRepository;
 
-    public OrderMapper(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
+    public OrderMapper(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public ResultMapper<OrderEntity, Order> entityToDomainMapping() {
@@ -22,7 +22,7 @@ public class OrderMapper {
                         .setItemName(entity.getItem())
                         .setPrice(entity.getPrice())
                         .setDate(entity.getDate())
-                        .setCustomerId(entity.getCustomerEntity().getId());
+                        .setUserId(entity.getUserEntity().getId());
     }
 
 
@@ -33,8 +33,8 @@ public class OrderMapper {
                         .setStatus(domain.getStatus())
                         .setItem(domain.getItemName())
                         .setPrice(domain.getPrice())
-                        .setCustomerEntity(
-                                customerRepository.findById(domain.getCustomerId()).get()
+                        .setUserEntity(
+                                userRepository.findById(domain.getUserId()).get()
                         );
     }
 

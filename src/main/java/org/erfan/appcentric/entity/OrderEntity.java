@@ -40,5 +40,5 @@ public class OrderEntity {
 
     @OneToOne
     @JoinColumn(name = "CUSTOMER_ID")
-    CustomerEntity customerEntity;
+    UserEntity userEntity;
 }

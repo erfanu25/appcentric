@@ -1,7 +1,8 @@
 package org.erfan.appcentric;
 
-import org.erfan.appcentric.entity.CustomerEntity;
-import org.erfan.appcentric.repository.CustomerRepository;
+import org.erfan.appcentric.domain.Enum.UserRole;
+import org.erfan.appcentric.entity.UserEntity;
+import org.erfan.appcentric.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +14,10 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 @SpringBootApplication
-public class Erfanu25Application {
+public class AppcentricApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Erfanu25Application.class, args);
+		SpringApplication.run(AppcentricApplication.class, args);
         browse();
 	}
 
@@ -41,14 +42,16 @@ public class Erfanu25Application {
 
 
 	@Bean
-	public CommandLineRunner demoData(CustomerRepository customerRepository) {
+	public CommandLineRunner demoData(UserRepository userRepository) {
 		return args -> {
-			CustomerEntity customerEntity = new CustomerEntity();
-			if (customerRepository.findByFirstName("Erfan").isEmpty()) {
-                customerEntity.setFirstName("Erfan");
-                customerEntity.setLastName("Bhuiyan");
-                customerEntity.setEmail("mderfan2@gmail.com");
-                customerRepository.save(customerEntity);
+			UserEntity userEntity = new UserEntity();
+			if (userRepository.findByFirstName("Erfan").isEmpty()) {
+                userEntity.setFirstName("Erfan");
+                userEntity.setLastName("Bhuiyan");
+                userEntity.setEmail("mderfan2@gmail.com");
+                userEntity.setPassword("1234");
+                userEntity.setUserType(UserRole.SuperAdmin);
+                userRepository.save(userEntity);
             }
 		};
 	}

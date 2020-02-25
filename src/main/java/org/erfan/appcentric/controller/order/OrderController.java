@@ -19,9 +19,9 @@ public class OrderController {
         return orderService.getOrderList();
     }
 
-    @GetMapping(value = "/order/{customerId}")
-    public List<Order> getOrdersByCustomer(@PathVariable long customerId) {
-        return orderService.getOrdersByCustomer(customerId);
+    @GetMapping(value = "/order/{userId}")
+    public List<Order> getOrdersByUser(@PathVariable long userId) {
+        return orderService.getOrdersByUser(userId);
     }
 
     @PostMapping("/order")

@@ -4,7 +4,7 @@ import org.erfan.appcentric.domain.Enum.StatusType;
 import org.erfan.appcentric.domain.Order;
 import org.erfan.appcentric.entity.OrderEntity;
 import org.erfan.appcentric.mapper.OrderMapper;
-import org.erfan.appcentric.repository.CustomerRepository;
+import org.erfan.appcentric.repository.UserRepository;
 import org.erfan.appcentric.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +16,12 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
-    private final CustomerRepository customerRepository;
+    private final UserRepository userRepository;
 
-    public OrderService(OrderRepository orderRepository, OrderMapper orderMapper, CustomerRepository customerRepository) {
+    public OrderService(OrderRepository orderRepository, OrderMapper orderMapper, UserRepository userRepository) {
         this.orderRepository = orderRepository;
         this.orderMapper = orderMapper;
-        this.customerRepository = customerRepository;
+        this.userRepository = userRepository;
     }
 
     public List<Order> getOrderList() {
@@ -33,8 +33,8 @@ public class OrderService {
                 .collect(Collectors.toList());
     }
 
-    public List<Order> getOrdersByCustomer(long customerId) {
-        return orderRepository.findAllByCustomerEntity(customerRepository.findById(customerId).get())
+    public List<Order> getOrdersByUser(long userId) {
+        return orderRepository.findAllByUserEntity(userRepository.findById(userId).get())
                 .stream()
                 .map(orderEntity -> orderMapper
                         .entityToDomainMapping()

@@ -14,7 +14,7 @@ public class Order {
     Long id;
     int quantity;
     String itemName;
-    Long customerId;
+    Long userId;
     long price;
     StatusType status;
     LocalDateTime date;

@@ -18,31 +18,31 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 @Import({SpringDataRestConfiguration.class})
 public class SwaggerConfiguration {
     @Bean
-    public Docket CustomerApi() {
+    public Docket UserApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("Customer")
+                .groupName("User")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(
-                        "org.erfan.appcentric.controller.customer"))
+                        "org.erfan.appcentric.controller.user"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(
                         new ApiInfoBuilder()
-                                .title("Customer Information")
-                                .description("Customer Information REST API")
+                                .title("User Information")
+                                .description("User Information REST API")
                                 .version("0.0.1")
                                 .license("© Md Erfan Ullah Bhuiyan")
-                                .licenseUrl("http://appcentric.github.io")
+                                .licenseUrl("http://erfanu25.github.io")
                                 .contact(
                                         new Contact(
                                                 "Md Erfan Ullah Bhuiyan",
-                                                "http://appcentric.github.io",
+                                                "http://erfanu25.github.io",
                                                 "mderfan2@gmail.com"))
                                 .build());
     }
 
     @Bean
-    public Docket UserApi() {
+    public Docket OrderApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("Order")
                 .select()
@@ -52,15 +52,15 @@ public class SwaggerConfiguration {
                 .build()
                 .apiInfo(
                         new ApiInfoBuilder()
-                                .title("Customer Information")
-                                .description("Customer Information REST API")
+                                .title("Order Information")
+                                .description("Order Information REST API")
                                 .version("0.0.1")
                                 .license("© Md Erfan Ullah Bhuiyan")
-                                .licenseUrl("http://appcentric.github.io")
+                                .licenseUrl("http://erfanu25.github.io")
                                 .contact(
                                         new Contact(
                                                 "Md Erfan Ullah Bhuiyan",
-                                                "http://appcentric.github.io",
+                                                "http://erfanu25.github.io",
                                                 "mderfan2@gmail.com"))
                                 .build());
     }
