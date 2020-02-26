@@ -21,7 +21,7 @@ import java.util.Arrays;
 @EnableSwagger2WebMvc
 @Import({SpringDataRestConfiguration.class})
 public class SwaggerConfiguration {
-    public static final String AUTH_SERVER = "http://localhost:8083/spring-security-oauth-server/oauth";
+    public static final String AUTH_SERVER = "http://localhost:8083/oauth";
     public static final String CLIENT_ID = "fooClientIdPassword";
     public static final String CLIENT_SECRET = "secret";
     @Bean
