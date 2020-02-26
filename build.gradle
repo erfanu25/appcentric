@@ -48,6 +48,13 @@ dependencies {
 	compile('io.springfox:springfox-data-rest:3.0.0-SNAPSHOT')
 	compile('io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT')
 	
+	//for oauth2
+//	compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.4.0.RELEASE'
+	
+    //for spring security
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.2.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.2.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.2.RELEASE'
 	// for template  engine
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	
