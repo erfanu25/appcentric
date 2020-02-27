@@ -1,4 +1,4 @@
-package org.erfan.appcentric;
+package org.erfan.appcentric.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

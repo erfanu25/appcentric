@@ -77,3 +77,6 @@ https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-
 `18.` Spring Security
 https://www.baeldung.com/security-spring
 
+`19.` spring boot security Auto configuration
+https://www.baeldung.com/spring-boot-security-autoconfiguration
+
