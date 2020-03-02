@@ -75,7 +75,8 @@ https://thoughts-on-java.org/jpa-generate-primary-keys/
 https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html
 
 `18.` Spring Security
-https://www.baeldung.com/security-spring
+https://www.baeldung.com/security-spring   
+important - https://dzone.com/articles/spring-security-authentication
 
 `19.` spring boot security Auto configuration
 https://www.baeldung.com/spring-boot-security-autoconfiguration
