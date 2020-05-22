@@ -6,11 +6,18 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
+import java.util.Optional;
 
 @RepositoryRestResource(collectionResourceRel = "UserEntity", path = "UserEntity")
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     List<UserEntity>  findByFirstName(@Param("name") String name);
 
     UserEntity findByEmail(@Param("email") String email);
+
+    Optional<UserEntity> findByUsername(String username);
+
+    Boolean existsByUsername(String username);
+
+    Boolean existsByEmail(String email);
 
 }

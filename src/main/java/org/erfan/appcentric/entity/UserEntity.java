@@ -32,6 +32,11 @@ public class UserEntity {
 
     @NotNull
     @NotEmpty
+    @Column(name = "USERNAME")
+    String username;
+
+    @NotNull
+    @NotEmpty
     @Column(name = "CUSTOMER_LAST_NAME")
     String lastName;
 
