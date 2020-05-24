@@ -57,6 +57,10 @@ dependencies {
     compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.2.RELEASE'
 	// for template  engine
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+
+	//for jwt
+
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	
 //	//oracle database
 //	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
