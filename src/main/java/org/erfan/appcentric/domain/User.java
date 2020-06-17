@@ -19,7 +19,6 @@ public class User {
     Long id;
     String firstName;
     String lastName;
-    String username;
     @ValidEmail
     String email;
     @JsonIgnore
@@ -31,8 +30,5 @@ public class User {
     @JsonIgnore
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     UserRole userType;
-
-
-
 
 }
