@@ -42,6 +42,10 @@ public class OrderService {
                 .collect(Collectors.toList());
     }
 
+    public Order getOrderById(long orderId) {
+        return orderMapper.entityToDomainMapping().map(orderRepository.findById(orderId).get());
+    }
+
     public Long saveOrder(Order order) {
         return orderRepository.save(orderMapper.domainToEntityMapping().map(order)).getId();
     }
