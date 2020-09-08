@@ -11,14 +11,12 @@ import springfox.documentation.spring.data.rest.configuration.SpringDataRestConf
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger.web.SecurityConfiguration;
 import springfox.documentation.swagger.web.SecurityConfigurationBuilder;
-import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 import java.util.Arrays;
 
 
 
 @Configuration
-@EnableSwagger2WebMvc
 @Import({SpringDataRestConfiguration.class})
 public class SwaggerConfiguration {
     public static final String AUTH_SERVER = "http://localhost:8083/oauth";

@@ -22,7 +22,7 @@ public class AppcentricApplication {
 	}
 
     private static void browse() {
-        String url = "http://localhost:8083/swagger-ui.html";
+        String url = "http://localhost:8083/swagger-ui/";
         if(Desktop.isDesktopSupported()){
             Desktop desktop = Desktop.getDesktop();
             try {
