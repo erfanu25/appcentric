@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import springfox.documentation.annotations.ApiIgnore;
 
 import java.awt.*;
 import java.io.IOException;
@@ -20,6 +23,15 @@ public class AppcentricApplication {
 		SpringApplication.run(AppcentricApplication.class, args);
         browse();
 	}
+
+    @Controller
+    @ApiIgnore
+    public static class ApiController {
+        @GetMapping("/")
+        public String api() {
+            return "redirect:/swagger-ui/";
+        }
+    }
 
     private static void browse() {
         String url = "http://localhost:8083/swagger-ui/";
